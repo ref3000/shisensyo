@@ -4,37 +4,31 @@
     <title>sisensyo!!!</title>
   </head>
   <body>
-    <canvas width="60" height="120" style="height: 96vh;"></canvas>
+    <div>
+      <img id="f00" src="https://ref3000.github.io/shisensyo/img/p_ji_c_1.gif" width="47" height="63"/>
+      <img id="f01" src="https://ref3000.github.io/shisensyo/img/p_ji_c_1.gif" width="47" height="63"/>
+      <img id="f02" src="https://ref3000.github.io/shisensyo/img/p_ji_c_1.gif" width="47" height="63"/>
+    </div>
+    <div>
+      <img id="f10" src="https://ref3000.github.io/shisensyo/img/p_ji_c_1.gif" width="47" height="63"/>
+      <img id="f11" src="" width="47" height="63"/>
+      <img id="f12" src="https://ref3000.github.io/shisensyo/img/p_ji_c_1.gif" width="47" height="63"/>
+    </div>
+    <div>
+      <img id="f20" src="https://ref3000.github.io/shisensyo/img/p_ji_c_1.gif" width="47" height="63"/>
+      <img id="f21" src="https://ref3000.github.io/shisensyo/img/p_ji_c_1.gif" width="47" height="63"/>
+      <img id="f22" src="https://ref3000.github.io/shisensyo/img/p_ji_c_1.gif" width="47" height="63"/>
+    </div>
     <script>
-      var context = document.querySelector("canvas").getContext("2d")
-
       var field = [
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 1, 1],
-        [1, 2, 3, 1, 4, 1],
-        [1, 1, 2, 3, 3, 3],
-        [2, 2, 3, 4, 4, 4],
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 0, 7],
       ]
-
-      drawField()
-
-      function drawField() {
-        for (var row = 0; row < 12; row++) {
-          for (var col = 0; col < 6; col++) {
-            context.fillStyle = "black"
-            if (field[row][col] == 1) context.fillStyle = "red"
-            if (field[row][col] == 2) context.fillStyle = "green"
-            if (field[row][col] == 3) context.fillStyle = "blue"
-            if (field[row][col] == 4) context.fillStyle = "yellow"
-            context.fillRect(col * 10, row * 10, 10, 10)
-          }
+      for (i=0; i<3; i++) {
+        for (j=0; j<3; j++) {
+          var elem = document.getElementById("f"+i+j);
+          console.log(elem)
         }
       }
     </script>
